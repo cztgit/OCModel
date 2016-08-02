@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NSObject+Model.h"
+#import "UserModel.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSDictionary *dict = @{@"username": @"tuluobo",
+                           @"age": @(26),
+                           @"boy": @(YES),
+                           @"books": @[@"java",@"oc",@"swift"]
+                           };
+    UserModel *model = [UserModel modelWithDict:dict];
+    NSLog(@"userModel = %@", model);
+    
+    NSLog(@"========================================");
+    
+    NSDictionary *newDict = [model dictWithModel:model];
+    NSLog(@"newDict = %@", newDict);
+    
     return YES;
 }
 
