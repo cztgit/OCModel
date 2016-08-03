@@ -22,6 +22,7 @@
     unsigned int attrCount;
     objc_property_attribute_t *attrs = property_copyAttributeList(property, &attrCount);
     for (unsigned i=0; i<attrCount; i++) {
+        NSLog(@"attr.name = %s", attrs[i].name);
         if (attrs[i].name[0] == 'T') {
             size_t len = strlen(attrs[i].value);
             if (len>3) {

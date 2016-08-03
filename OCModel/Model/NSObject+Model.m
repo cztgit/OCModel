@@ -36,7 +36,7 @@
     return modelObject;
 }
 
-- (NSDictionary *)dictWithModel:(NSObject *)object {
+- (NSDictionary *)dict {
     Class cls = [self class];
     
     unsigned int countProperty = 0;
@@ -46,6 +46,7 @@
     for (unsigned int i = 0; i<countProperty; i++) {
         PropertyInfo *propertyInfo = [[PropertyInfo alloc] initWithProperty:propertys[i]];
         if (propertyInfo.propertyName!=nil) {
+            // 通过 getter 方法来获取Value
             dic[propertyInfo.propertyName] = [self modelGetValueWithProperty:propertyInfo];
         }
     }

@@ -30,7 +30,7 @@
     
     NSLog(@"========================================");
     
-    NSDictionary *newDict = [model dictWithModel:model];
+    NSDictionary *newDict = [model dict];
     NSLog(@"newDict = %@", newDict);
     
     return YES;

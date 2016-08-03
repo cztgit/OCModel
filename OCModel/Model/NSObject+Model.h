@@ -12,6 +12,6 @@
 
 +(instancetype)modelWithDict:(NSDictionary *)dict;
 
--(NSDictionary *)dictWithModel:(NSObject *)object;
+-(NSDictionary *)dict;
 
 @end
