@@ -30,7 +30,7 @@
                 char name[len-2];
                 name[len-3] = '\0';
                 memcpy(name, attrs[i].value+2, len-3);
-                NSLog(@"%s ===》typeName = %s", propertyName, name);
+                //NSLog(@"%s ===》typeName = %s", propertyName, name);
                 _typeClass = objc_getClass(name);
             }
         }

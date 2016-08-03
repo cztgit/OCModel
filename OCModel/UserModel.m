@@ -11,7 +11,7 @@
 @implementation UserModel
 
 -(NSString *)description {
-    NSString *str = [NSString stringWithFormat:@"%@--%ld--%d--%@", _username, _age, _boy, _books];
+    NSString *str = [NSString stringWithFormat:@"%@ -- %ud -- %d -- %@", _username, _age, _boy, _books];
     return str;
 }
 

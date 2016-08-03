@@ -18,7 +18,7 @@
 /**
  *  属性列表
  */
-@property (nonatomic, strong) NSDictionary *propertyInfo;
+@property (nonatomic, strong) NSDictionary *propertyInfo; //@{"property name": "property obj"}
 
 
 -(instancetype)initWithClass: (Class)cls;
